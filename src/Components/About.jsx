@@ -16,7 +16,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/banner.png";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -24,19 +24,19 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "Hello! I’m Michael Stamler, a student of Computer Programming and Analysis with an interest in business applications. My journey in tech is fueled by a desire to continuously learn and a passion for applying technology to solve real-world problems. Exploring everything from programming to advances in artificial intelligence and cloud computing, I see every challenge as an opportunity to grow and contribute positively.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Computer Programming",
+  "Artificial Intelligence",
+  "Data Analytics",
+  "Cybersecurity",
+  "Cloud Computing",
+  "Data Science",
 ];
 
 /**
