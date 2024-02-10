@@ -25,7 +25,7 @@ import "./styles.css";
  */
 const siteProps = {
   name: "Michael Stamler",
-  title: "Learning Journey",
+  title: "Tech Innovator and Ethical AI Advocate",
   email: "MichaelStamler@outlook.com",
   gitHub: "mstam-mdc",
   instagram: "",
@@ -35,7 +35,7 @@ const siteProps = {
   youTube: "",
 };
 
-const primaryColor = "#4E567E";
+const primaryColor = "#246C7F";
 const secondaryColor = "#D2F1E4";
 
 const App = () => {

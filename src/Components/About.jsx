@@ -16,9 +16,9 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-back.png";
+import image from "../images/motion-back2.png";
 
-const imageAltText = "purple and blue abstract background";
+const imageAltText = "Hyper-realistic landscape featuring a crystal-clear lake, lush green forests, majestic mountains in the background, and a clear blue sky, with reflections of the mountains and trees in the still water, creating a peaceful and tranquil atmosphere.";
 
 /**
  * Sort description that expands on your title on the Home component.
@@ -45,7 +45,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "";
+  "Never lose help. Storms make people stronger and never last forever. - Roy T. Bennett";
 
 const About = () => {
   return (

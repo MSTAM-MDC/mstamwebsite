@@ -48,6 +48,7 @@ section img.background {
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 7rem;
+  color: rgb(255, 255, 255);
   font-weight: 400;
   line-height: 0.8;
   margin: 0;
@@ -56,6 +57,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: 400;
+  color: rgb(255, 255, 255);
   margin: 0;
   padding-top: 1rem;
 }
@@ -90,16 +92,16 @@ li {
 }
 
 li::marker {
-  color: #4e567e;
+  color: #38520F;
 }
 
 a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 a:hover {
-  color: #4e567e;
+  color: #38520F;
 }
 
 .container {
