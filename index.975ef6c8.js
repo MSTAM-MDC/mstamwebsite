@@ -27182,7 +27182,7 @@ var _motionBack2PngDefault = parcelHelpers.interopDefault(_motionBack2Png);
 const imageAltText = "Hyper-realistic landscape featuring a crystal-clear lake, lush green forests, majestic mountains in the background, and a clear blue sky, with reflections of the mountains and trees in the still water, creating a peaceful and tranquil atmosphere.";
 /**
  * Sort description that expands on your title on the Home component.
- */ const description = "Hello! I’m Michael Stamler, a Computer Programming and Analysis with an interest in business applications. My journey in tech is fueled by a desire to continuously learn and a passion for applying technology to solve real-world problems. Exploring everything from programming to advances in artificial intelligence and cloud computing, I see every challenge as an opportunity to grow and contribute positively.";
+ */ const description = "Hello! I’m Michael Stamler, a Computer Programmer and Analyst with an interest in business applications. My journey in tech is fueled by a desire to continuously learn and a passion for applying technology to solve real-world problems. Exploring everything from programming to advances in artificial intelligence and cloud computing, I see every challenge as an opportunity to grow and contribute positively.";
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
