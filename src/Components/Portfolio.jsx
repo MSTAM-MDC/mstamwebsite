@@ -31,16 +31,16 @@ const imageAltText = "laptop with lightbulb on top";
  */
 const projectList = [
   {
-    title: "Hate Speech Detection",
-    description:
-      "Developed a hate speech detector with OpenAI API and Streamlit, offering real-time analysis in JSON, enriched with informative tabs.",
-    url: "https://hatespeechdetectmdc.streamlit.app/",
-  },
-  {
     title: "Modeling U.S. Suicide Rate Risk",
     description:
       "Engineered interactive dashboard using Tableau to analyze the surge in suicide rates due to COVID-19, showcasing ethical data use for societal benefit.",
     url: "https://public.tableau.com/views/ModelingU_S_SuicideRateRisk1/Main?:language=en-US&:display_count=n&:origin=viz_share_link",
+  },
+  {
+    title: "Hate Speech Detection",
+    description:
+      "Developed a hate speech detector with OpenAI API and Streamlit, offering real-time analysis in JSON, enriched with informative tabs.",
+    url: "https://hatespeechdetectmdc.streamlit.app/",
   },
   {
     title: "Computer Vision Projects",
