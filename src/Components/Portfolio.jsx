@@ -19,9 +19,9 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/idea.png";
 
-const imageAltText = "desktop with books and laptop";
+const imageAltText = "laptop with lightbulb on top";
 
 /**
  * Project list
@@ -31,28 +31,28 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Computer Vision Projects 🎉",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "Engaged in art projects that blend OpenCV techniques and MNIST data analysis, covering facial recognition, color segmentation, motion tracking, and image processing.",
+    url: "https://github.com/MSTAM-MDC/opencv",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Hate Speech Detection",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Developed a hate speech detector with OpenAI API and Streamlit, offering real-time analysis in JSON, enriched with informative tabs.",
+    url: "https://hatespeechdetectmdc.streamlit.app/",
   },
   {
     title: "My Resume Site",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and abilities.",
+    url: "https://github.com/MSTAM-MDC/mstamwebsite",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "",
+    url: "",
   },
 ];
 

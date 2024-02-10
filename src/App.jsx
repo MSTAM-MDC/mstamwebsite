@@ -26,8 +26,8 @@ import "./styles.css";
 const siteProps = {
   name: "Michael Stamler",
   title: "Learning Journey",
-  email: "",
-  gitHub: "mmstam-mdc",
+  email: "MichaelStamler@outlook.com",
+  gitHub: "mstam-mdc",
   instagram: "",
   linkedIn: "michael-stamler",
   medium: "",
