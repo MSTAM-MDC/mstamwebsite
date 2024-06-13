@@ -40,7 +40,7 @@ const projectList = [
     title: "Hate Speech Detection",
     description:
       "Developed a hate speech detector with OpenAI API and Streamlit, offering real-time analysis in JSON, enriched with informative tabs.",
-    url: "https://hatespeechdetectmdc.streamlit.app/",
+    url: "https://hatespeech-detection.streamlit.app/",
   },
   {
     title: "Computer Vision Projects",
