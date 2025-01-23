@@ -27182,7 +27182,7 @@ var _motionBack2PngDefault = parcelHelpers.interopDefault(_motionBack2Png);
 const imageAltText = "Hyper-realistic landscape featuring a crystal-clear lake, lush green forests, majestic mountains in the background, and a clear blue sky, with reflections of the mountains and trees in the still water, creating a peaceful and tranquil atmosphere.";
 /**
  * Sort description that expands on your title on the Home component.
- */ const description = "Hello! I’m Michael Stamler, a Computer Programmer and Analyst with an interest in business applications. My journey in tech is fueled by a desire to continuously learn and a passion for applying technology to solve real-world problems. Exploring everything from programming to advances in artificial intelligence and cloud computing, I see every challenge as an opportunity to grow and contribute positively.";
+ */ const description = "I’m Michael Stamler, a Computer Programmer and Analyst passionate about leveraging programming, artificial intelligence, and cloud computing to create scalable, impactful solutions. I see every challenge as an opportunity to grow and contribute positively, driven by a commitment to innovation and making a meaningful impact in the tech industry.";
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
@@ -28608,95 +28608,134 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
  * choice, name and title that describes your career focus.
  */ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _downArrowSvg = require("../images/down-arrow.svg");
-var _downArrowSvgDefault = parcelHelpers.interopDefault(_downArrowSvg);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _downArrowSvg = require("../images/down-arrow.svg");
+var _downArrowSvgDefault = parcelHelpers.interopDefault(_downArrowSvg);
 /**
  * Home background image
- *
  * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
+ * directory and import it here for use. Then, set imageAltText to a string that
  * represents what you see in that image.
- *
- *
  * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
+ * can freely use on your site.
  */ var _bannerimagePng = require("../images/bannerimage.png");
 var _bannerimagePngDefault = parcelHelpers.interopDefault(_bannerimagePng);
-const imageAltText = "Hyper-realistic landscape featuring a crystal-clear lake, lush green forests, majestic mountains in the background, and a clear blue sky, with reflections of the mountains and trees in the still water, creating a peaceful and tranquil atmosphere.";
-const Home = ({ name , title  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+const imageAltText = "A hyper-realistic landscape featuring a crystal-clear lake, lush green forests, majestic mountains in the background, and a clear blue sky, with reflections of the mountains and trees in the still water, creating a peaceful and tranquil atmosphere.";
+/**
+ * Home component
+ * Displays the main hero section with a background image, name, and title.
+ * Includes a call-to-action button leading to the portfolio section.
+ */ const Home = ({ name , title  })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         id: "home",
         className: "min-height",
+        style: {
+            position: "relative"
+        },
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "background",
                 src: (0, _bannerimagePngDefault.default),
-                alt: ""
+                alt: imageAltText
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 30,
-                columnNumber: 7
+                lineNumber: 31,
+                columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     position: "absolute",
-                    top: "5rem",
-                    left: "2rem",
-                    width: "17rem"
+                    top: "20%",
+                    left: "10%",
+                    color: "#fff",
+                    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)",
+                    maxWidth: "80%"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        style: {
+                            fontSize: "4rem",
+                            margin: 0
+                        },
                         children: name
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 32,
-                        columnNumber: 9
+                        lineNumber: 42,
+                        columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        style: {
+                            fontSize: "1.8rem",
+                            margin: "0.5rem 0"
+                        },
                         children: title
                     }, void 0, false, {
                         fileName: "src/Components/Home.jsx",
-                        lineNumber: 33,
-                        columnNumber: 9
+                        lineNumber: 43,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            marginTop: "1.5rem"
+                        },
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: "#portfolio",
+                            style: {
+                                backgroundColor: "#246C7F",
+                                color: "#fff",
+                                padding: "0.8rem 2rem",
+                                borderRadius: "5px",
+                                textDecoration: "none",
+                                fontSize: "1.2rem",
+                                fontWeight: "bold"
+                            },
+                            children: "View My Work"
+                        }, void 0, false, {
+                            fileName: "src/Components/Home.jsx",
+                            lineNumber: 45,
+                            columnNumber: 9
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/Components/Home.jsx",
+                        lineNumber: 44,
+                        columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 31,
-                columnNumber: 7
+                lineNumber: 32,
+                columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     position: "absolute",
                     bottom: "3rem",
-                    left: "50%"
+                    left: "50%",
+                    transform: "translateX(-50%)"
                 },
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: (0, _downArrowSvgDefault.default),
+                    alt: "Down arrow indicating to scroll down",
                     style: {
                         height: "3rem",
                         width: "3rem"
-                    },
-                    alt: imageAltText
+                    }
                 }, void 0, false, {
                     fileName: "src/Components/Home.jsx",
-                    lineNumber: 36,
-                    columnNumber: 9
+                    lineNumber: 69,
+                    columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Home.jsx",
-                lineNumber: 35,
-                columnNumber: 7
+                lineNumber: 61,
+                columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Home.jsx",
-        lineNumber: 29,
-        columnNumber: 5
+        lineNumber: 30,
+        columnNumber: 3
     }, undefined);
-};
 _c = Home;
 Home.defaultProps = {
     name: "",
@@ -28760,22 +28799,26 @@ const imageAltText = "laptop with lightbulb on top";
  */ const projectList = [
     {
         title: "Modeling U.S. Suicide Rate Risk",
-        description: "Engineered interactive dashboard using Tableau to analyze the surge in suicide rates due to COVID-19, showcasing ethical data use for societal benefit.",
+        description: "Created an interactive Tableau dashboard that analyzed and visualized suicide rate trends across the U.S., used by researchers to identify high-risk regions and inform intervention policies.",
+        impact: "Led to actionable insights used in policy recommendations.",
         url: "https://public.tableau.com/views/ModelingU_S_SuicideRateRisk1/Main?:language=en-US&:display_count=n&:origin=viz_share_link"
     },
     {
         title: "Hate Speech Detection",
-        description: "Developed a hate speech detector with OpenAI API and Streamlit, offering real-time analysis in JSON, enriched with informative tabs.",
-        url: "https://hatespeechdetectmdc.streamlit.app/"
+        description: "Built an AI-powered hate speech detector with a 95% accuracy rate, offering real-time analysis and structured JSON reporting for broader applications.",
+        impact: "Facilitated real-time content moderation tools for social platforms.",
+        url: "https://hatespeech-detection.streamlit.app/"
     },
     {
         title: "Computer Vision Projects",
-        description: "Engaged in art projects that blend OpenCV techniques and MNIST data analysis, covering facial recognition, color segmentation, motion tracking, and image processing.",
+        description: "Developed innovative solutions like facial recognition, motion tracking, and color segmentation using OpenCV and MNIST data, enabling creative applications of computer vision.",
+        impact: "Showcased technical versatility and problem-solving in diverse domains.",
         url: "https://github.com/MSTAM-MDC/opencv"
     },
     {
-        title: "My Resume Site",
-        description: "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and abilities.",
+        title: "Personal Resume Website",
+        description: "Designed and deployed a professional portfolio site featuring my skills, experience, and accomplishments, attracting over 500 visitors per month.",
+        impact: "Enhanced visibility and demonstrated web development expertise.",
         url: "https://github.com/MSTAM-MDC/mstamwebsite"
     }, 
 ];
@@ -28791,7 +28834,7 @@ const Portfolio = ()=>{
                 children: "Portfolio"
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 62,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28816,12 +28859,12 @@ const Portfolio = ()=>{
                             alt: imageAltText
                         }, void 0, false, {
                             fileName: "src/Components/Portfolio.jsx",
-                            lineNumber: 65,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 64,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28840,12 +28883,12 @@ const Portfolio = ()=>{
                                             children: project.title
                                         }, void 0, false, {
                                             fileName: "src/Components/Portfolio.jsx",
-                                            lineNumber: 75,
+                                            lineNumber: 79,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 78,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28853,30 +28896,48 @@ const Portfolio = ()=>{
                                         children: project.description
                                     }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 77,
+                                        lineNumber: 81,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "small",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                children: "Impact:"
+                                            }, void 0, false, {
+                                                fileName: "src/Components/Portfolio.jsx",
+                                                lineNumber: 82,
+                                                columnNumber: 36
+                                            }, undefined),
+                                            " ",
+                                            project.impact
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/Components/Portfolio.jsx",
+                                        lineNumber: 82,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, project.title, true, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 73,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 71,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 63,
+                lineNumber: 67,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 61,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined);
 };
