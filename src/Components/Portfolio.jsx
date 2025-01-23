@@ -79,7 +79,9 @@ const Portfolio = () => {
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
-              <p className="small"><strong>Impact:</strong> {project.impact}</p>
+              <div className="impact-container">
+                <p className="impact"><strong>Impact:</strong> {project.impact}</p>
+              </div>
             </div>
           ))}
         </div>
