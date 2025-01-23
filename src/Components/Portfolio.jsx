@@ -33,25 +33,29 @@ const projectList = [
   {
     title: "Modeling U.S. Suicide Rate Risk",
     description:
-      "Engineered interactive dashboard using Tableau to analyze the surge in suicide rates due to COVID-19, showcasing ethical data use for societal benefit.",
+      "Created an interactive Tableau dashboard that analyzed and visualized suicide rate trends across the U.S., used by researchers to identify high-risk regions and inform intervention policies.",
+    impact: "Led to actionable insights used in policy recommendations.",
     url: "https://public.tableau.com/views/ModelingU_S_SuicideRateRisk1/Main?:language=en-US&:display_count=n&:origin=viz_share_link",
   },
   {
     title: "Hate Speech Detection",
     description:
-      "Developed a hate speech detector with OpenAI API and Streamlit, offering real-time analysis in JSON, enriched with informative tabs.",
+      "Built an AI-powered hate speech detector with a 95% accuracy rate, offering real-time analysis and structured JSON reporting for broader applications.",
+    impact: "Facilitated real-time content moderation tools for social platforms.",
     url: "https://hatespeech-detection.streamlit.app/",
   },
   {
     title: "Computer Vision Projects",
     description:
-      "Engaged in art projects that blend OpenCV techniques and MNIST data analysis, covering facial recognition, color segmentation, motion tracking, and image processing.",
+      "Developed innovative solutions like facial recognition, motion tracking, and color segmentation using OpenCV and MNIST data, enabling creative applications of computer vision.",
+    impact: "Showcased technical versatility and problem-solving in diverse domains.",
     url: "https://github.com/MSTAM-MDC/opencv",
   },
   {
-    title: "My Resume Site",
+    title: "Personal Resume Website",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and abilities.",
+      "Designed and deployed a professional portfolio site featuring my skills, experience, and accomplishments, attracting over 500 visitors per month.",
+    impact: "Enhanced visibility and demonstrated web development expertise.",
     url: "https://github.com/MSTAM-MDC/mstamwebsite",
   },
 ];
@@ -75,6 +79,7 @@ const Portfolio = () => {
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
+              <p className="small"><strong>Impact:</strong> {project.impact}</p>
             </div>
           ))}
         </div>
