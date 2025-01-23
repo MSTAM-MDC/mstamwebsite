@@ -120,4 +120,43 @@ img.socialIcon {
   width: 30px;
 }
 
+#Experience {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+}
+
+#Experience h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+#Experience h3 {
+  color: #246c7f;
+  font-size: 1.5rem;
+}
+
+#Experience p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#Experience ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.impact-container {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px #0000001a;
+}
+
+.impact {
+  color: #246c7f;
+  margin: 0;
+  font-size: 1rem;
+}
+
 /*# sourceMappingURL=index.4d663569.css.map */

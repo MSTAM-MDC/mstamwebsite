@@ -27077,6 +27077,8 @@ var _home = require("./Components/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _portfolio = require("./Components/Portfolio");
 var _portfolioDefault = parcelHelpers.interopDefault(_portfolio);
+var _experience = require("./Components/Experience");
+var _experienceDefault = parcelHelpers.interopDefault(_experience);
 var _stylesCss = require("./styles.css");
 /**
  * This object represents your information. The project is set so that you
@@ -27105,7 +27107,7 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {
@@ -27113,17 +27115,22 @@ const App = ()=>{
                 title: siteProps.title
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 46,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 47,
+                lineNumber: 48,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _experienceDefault.default), {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {
@@ -27132,13 +27139,13 @@ const App = ()=>{
                 secondaryColor: secondaryColor
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 48,
+                lineNumber: 50,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.jsx",
-        lineNumber: 43,
+        lineNumber: 44,
         columnNumber: 5
     }, undefined);
 };
@@ -27152,7 +27159,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Components/About":"kouZu","./Components/Footer":"7GWgX","./Components/Header":"9Dt2F","./Components/Home":"jIEVO","./Components/Portfolio":"lCaEt","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kouZu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Components/About":"kouZu","./Components/Footer":"7GWgX","./Components/Header":"9Dt2F","./Components/Home":"jIEVO","./Components/Portfolio":"lCaEt","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Components/Experience":"kFXFf"}],"kouZu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$17a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28754,7 +28761,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","../images/bannerimage.png":"5imvX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b5nCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/down-arrow.svg":"b5nCi","../images/bannerimage.png":"5imvX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b5nCi":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "down-arrow.1037091f.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"5imvX":[function(require,module,exports) {
@@ -28899,20 +28906,27 @@ const Portfolio = ()=>{
                                         lineNumber: 81,
                                         columnNumber: 15
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "small",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                                children: "Impact:"
-                                            }, void 0, false, {
-                                                fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 82,
-                                                columnNumber: 36
-                                            }, undefined),
-                                            " ",
-                                            project.impact
-                                        ]
-                                    }, void 0, true, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "impact-container",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "impact",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                    children: "Impact:"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Portfolio.jsx",
+                                                    lineNumber: 83,
+                                                    columnNumber: 39
+                                                }, undefined),
+                                                " ",
+                                                project.impact
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Portfolio.jsx",
+                                            lineNumber: 83,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
                                         fileName: "src/Components/Portfolio.jsx",
                                         lineNumber: 82,
                                         columnNumber: 15
@@ -28954,6 +28968,164 @@ $RefreshReg$(_c, "Portfolio");
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/idea.png":"grDfW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"grDfW":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "idea.c20f91a6.png" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire6158")
+},{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}],"kFXFf":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8b00 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8b00.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/**
+ * Experience component
+ * 
+ * Displays professional experience in a clean and visually appealing format.
+ * Each role is highlighted with the title, company, duration, and key achievements.
+ */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const experience = [
+    {
+        role: "Professional Services Consultant Intern",
+        company: "Amazon Web Services (AWS)",
+        location: "Arlington, VA",
+        duration: "May 2022 – August 2022",
+        description: "Collaborated with cross-functional teams to implement back-end AWS services, ensuring compliance and enhancing accessibility for 200+ offerings.",
+        achievements: [
+            "Achieved 99.9% uptime and <3ms response time, improving user experience for high-security clients.",
+            "Developed workflows and documentation, streamlining decision-making and boosting operational efficiency.", 
+        ]
+    },
+    {
+        role: "Business Analyst, Transportation Operations",
+        company: "Johnson & Johnson",
+        location: "Skillman, NJ",
+        duration: "April 2021 – July 2021",
+        description: "Optimized transportation operations and reduced costs by analyzing and improving processes for a global portfolio.",
+        achievements: [
+            "Improved compliance efficiencies in 5 distribution centers, achieving monthly targets for on-time performance.",
+            "Supported M&A transitions by resolving bottlenecks and sharing insights, driving seamless integration.", 
+        ]
+    },
+    {
+        role: "Transportation Analyst",
+        company: "Ferrero U.S.A., Inc.",
+        location: "Parsippany, NJ",
+        duration: "June 2019 – March 2021",
+        description: "Analyzed logistics data and led performance improvements to optimize transportation processes and client satisfaction.",
+        achievements: [
+            "Increased on-time delivery rate from 86.9% to 95.7%, eliminating late penalties for a premier client.",
+            "Improved compliance rate for key accounts from 14% to 80% by leading high-performance improvement meetings.", 
+        ]
+    }, 
+];
+const Experience = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+        className: "padding",
+        id: "experiment",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                style: {
+                    textAlign: "center"
+                },
+                children: "Professional Experience"
+            }, void 0, false, {
+                fileName: "src/Components/Experience.jsx",
+                lineNumber: 52,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                    paddingTop: "2rem"
+                },
+                children: experience.map((exp, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        style: {
+                            marginBottom: "2rem"
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                style: {
+                                    margin: 0
+                                },
+                                children: [
+                                    exp.role,
+                                    " at ",
+                                    exp.company
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Experience.jsx",
+                                lineNumber: 56,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                style: {
+                                    margin: "0.5rem 0",
+                                    fontWeight: "bold"
+                                },
+                                children: [
+                                    exp.location,
+                                    " | ",
+                                    exp.duration
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/Experience.jsx",
+                                lineNumber: 59,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: exp.description
+                            }, void 0, false, {
+                                fileName: "src/Components/Experience.jsx",
+                                lineNumber: 62,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                                children: exp.achievements.map((achievement, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                        style: {
+                                            marginBottom: "0.5rem"
+                                        },
+                                        children: achievement
+                                    }, i, false, {
+                                        fileName: "src/Components/Experience.jsx",
+                                        lineNumber: 65,
+                                        columnNumber: 17
+                                    }, undefined))
+                            }, void 0, false, {
+                                fileName: "src/Components/Experience.jsx",
+                                lineNumber: 63,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, index, true, {
+                        fileName: "src/Components/Experience.jsx",
+                        lineNumber: 55,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/Components/Experience.jsx",
+                lineNumber: 53,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/Experience.jsx",
+        lineNumber: 51,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Experience;
+exports.default = Experience;
+var _c;
+$RefreshReg$(_c, "Experience");
+
+  $parcel$ReactRefreshHelpers$8b00.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire6158")
 
 //# sourceMappingURL=index.975ef6c8.js.map
