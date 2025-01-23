@@ -24,7 +24,7 @@ const imageAltText = "Hyper-realistic landscape featuring a crystal-clear lake, 
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "Hello! I’m Michael Stamler, a Computer Programmer and Analyst with an interest in business applications. My journey in tech is fueled by a desire to continuously learn and a passion for applying technology to solve real-world problems. Exploring everything from programming to advances in artificial intelligence and cloud computing, I see every challenge as an opportunity to grow and contribute positively.";
+  "I’m Michael Stamler, a Computer Programmer and Analyst passionate about leveraging programming, artificial intelligence, and cloud computing to create scalable, impactful solutions. I see every challenge as an opportunity to grow and contribute positively, driven by a commitment to innovation and making a meaningful impact in the tech industry.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
