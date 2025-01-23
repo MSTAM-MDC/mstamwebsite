@@ -76,8 +76,8 @@ const Home = ({ name, title }) => (
 );
 
 Home.defaultProps = {
-  name: "Your Name",
-  title: "Your Title or Career Focus",
+  name: "",
+  title: "",
 };
 
 Home.propTypes = {
