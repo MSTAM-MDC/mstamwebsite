@@ -48,25 +48,26 @@ const experience = [
 
 const Experience = () => {
   return (
-    <section className="padding" id="experiment">
+    <section className="padding" id="experience">
       <h2 style={{ textAlign: "center" }}>Professional Experience</h2>
-      <div style={{ maxWidth: "800px", margin: "0 auto", paddingTop: "2rem" }}>
+      <div className="timeline">
         {experience.map((exp, index) => (
-          <div key={index} style={{ marginBottom: "2rem" }}>
-            <h3 style={{ margin: 0 }}>
-              {exp.role} at {exp.company}
-            </h3>
-            <p style={{ margin: "0.5rem 0", fontWeight: "bold" }}>
-              {exp.location} | {exp.duration}
-            </p>
-            <p>{exp.description}</p>
-            <ul>
-              {exp.achievements.map((achievement, i) => (
-                <li key={i} style={{ marginBottom: "0.5rem" }}>
-                  {achievement}
-                </li>
-              ))}
-            </ul>
+          <div className="timeline-item" key={index}>
+            <div className="timeline-marker" />
+            <div className="timeline-content">
+              <h3>
+                {exp.role} at {exp.company}
+              </h3>
+              <p className="small" style={{ fontWeight: "bold" }}>
+                {exp.location} | {exp.duration}
+              </p>
+              <p>{exp.description}</p>
+              <ul>
+                {exp.achievements.map((achievement, i) => (
+                  <li key={i}>{achievement}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>

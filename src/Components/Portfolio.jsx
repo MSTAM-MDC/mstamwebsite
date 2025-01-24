@@ -64,23 +64,21 @@ const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
-          <img
-            src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
-            alt={imageAltText}
-          />
+      <div className="portfolio-container">
+        <div className="portfolio-image">
+          <img src={image} alt={imageAltText} />
         </div>
-        <div className="container">
+        <div className="portfolio-projects">
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
+            <div className="portfolio-card" key={project.title}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                <h3>{project.title}</h3>
               </a>
-              <p className="small">{project.description}</p>
+              <p>{project.description}</p>
               <div className="impact-container">
-                <p className="impact"><strong>Impact:</strong> {project.impact}</p>
+                <p className="impact">
+                  <strong>Impact:</strong> {project.impact}
+                </p>
               </div>
             </div>
           ))}

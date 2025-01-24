@@ -54,28 +54,25 @@ const About = () => {
       <div
         style={{
           backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
+          width: "90%",
+          maxWidth: "800px",
+          padding: "2rem",
           margin: "3rem auto",
           textAlign: "center",
+          borderRadius: "8px",
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
       >
         <h2>About Myself</h2>
         <p className="large">{description}</p>
         <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
-          {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+        <div className="skills-container">
+          {skillsList.map((skill, index) => (
+            <div key={index} className="skill-card">
+              {skill}
+            </div>
           ))}
-        </ul>
+        </div>
         <hr />
         <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
       </div>
