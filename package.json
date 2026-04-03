@@ -2,12 +2,11 @@
   "name": "educator-js-codespace-template",
   "version": "1.0.0",
   "description": "Michael Stamler - Tech Innovator and Ethical AI Advocate",
-  "source": "src/index.html",
-  "homepage": "http://mstam-mdc.github.io/mstamwebsite",
+  "homepage": "https://mstam-mdc.github.io/mstamwebsite",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
-    "build-gh": "parcel build --public-url 'https://mstam-mdc.github.io/mstamwebsite'",
+    "start": "parcel src/index.html src/capstone.html",
+    "build": "parcel build src/index.html src/capstone.html",
+    "build-gh": "parcel build src/index.html src/capstone.html --public-url 'https://mstam-mdc.github.io/mstamwebsite/'",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
