@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Base */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  background: #f7fbfc;
+  color: #1f2933;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #246c7f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1c5563;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Main page wrapper */
+#capstone-main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero section */
+.capstone-hero {
+  background: linear-gradient(135deg, #246c7f 0%, #2f8898 100%);
+  color: white;
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.capstone-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.capstone-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4.5rem;
+  line-height: 0.95;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.capstone-hero h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 0 auto 1.25rem;
+  font-weight: 400;
+  max-width: 850px;
+}
+
+.capstone-hero p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Section layout */
+.capstone-section {
+  padding: 4rem 1.5rem;
+}
+
+.capstone-section.alt {
+  background: #eef7f8;
+}
+
+.capstone-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.capstone-section-title {
+  font-size: 2.2rem;
+  color: #246c7f;
+  text-align: center;
+  margin: 0 0 2rem;
+  font-weight: 600;
+}
+
+.capstone-section-intro {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Cards */
+.capstone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.capstone-card {
+  background: white;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(20, 40, 60, 0.07);
+}
+
+.capstone-card h3 {
+  margin: 0 0 0.75rem;
+  color: #246c7f;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.capstone-card p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.capstone-card ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.capstone-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.capstone-card li::marker {
+  color: #246c7f;
+}
+
+/* Highlight stats / metrics */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-box {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border: 1px solid #d9e6ea;
+  box-shadow: 0 6px 18px rgba(20, 40, 60, 0.06);
+}
+
+.metric-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #246c7f;
+  margin-bottom: 0.4rem;
+}
+
+.metric-label {
+  font-size: 0.95rem;
+  color: #4b5b67;
+  line-height: 1.5;
+}
+
+/* Architecture / workflow area */
+.workflow-box {
+  background: white;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(20, 40, 60, 0.06);
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.workflow-step {
+  background: #f7fbfc;
+  border: 1px solid #d9e6ea;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.workflow-step-number {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  background: #246c7f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.workflow-step h4 {
+  margin: 0 0 0.5rem;
+  color: #246c7f;
+  font-size: 1rem;
+}
+
+.workflow-step p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Technology tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: #d2f1e4;
+  color: #1d4f5b;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Documentation / button links */
+.link-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.capstone-button {
+  display: inline-block;
+  background: #246c7f;
+  color: white;
+  padding: 0.85rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.capstone-button:hover {
+  background: #1f5e6d;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.capstone-button.secondary {
+  background: white;
+  color: #246c7f;
+  border: 1px solid #246c7f;
+}
+
+.capstone-button.secondary:hover {
+  background: #eef7f8;
+  color: #1f5e6d;
+}
+
+/* Image/screenshot cards */
+.visual-card {
+  background: white;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(20, 40, 60, 0.06);
+}
+
+.visual-card img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.visual-caption {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5b67;
+}
+
+/* Footer */
+.capstone-footer {
+  background: #246c7f;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.capstone-footer p {
+  margin: 0.35rem 0;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .capstone-grid,
+  .metrics-grid,
+  .workflow-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .capstone-hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .capstone-hero {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .capstone-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .capstone-hero h2 {
+    font-size: 1.15rem;
+  }
+
+  .capstone-section {
+    padding: 3rem 1rem;
+  }
+
+  .capstone-section-title {
+    font-size: 1.8rem;
+  }
+
+  .capstone-grid,
+  .metrics-grid,
+  .workflow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .link-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .capstone-button {
+    text-align: center;
+  }
+}
