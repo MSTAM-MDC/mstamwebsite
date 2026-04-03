@@ -1,5 +1,5 @@
 import React from "react";
-import "./capstone.css";
+import "../capstone.css";
 
 const CapstoneApp = () => {
   return (
