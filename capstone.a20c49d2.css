@@ -1,0 +1,346 @@
+@import "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap";
+html, body {
+  width: 100%;
+  color: #1f2933;
+  scroll-behavior: smooth;
+  background: #f7fbfc;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #246c7f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1c5563;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#capstone-main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.capstone-hero {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #246c7f 0%, #2f8898 100%);
+  padding: 6rem 1.5rem 4rem;
+}
+
+.capstone-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.capstone-hero h1 {
+  margin: 0 0 1rem;
+  font-family: Cormorant Garamond, serif;
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: .95;
+}
+
+.capstone-hero h2 {
+  max-width: 850px;
+  margin: 0 auto 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.capstone-hero p {
+  max-width: 780px;
+  color: #ffffffeb;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.capstone-section {
+  padding: 4rem 1.5rem;
+}
+
+.capstone-section.alt {
+  background: #eef7f8;
+}
+
+.capstone-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.capstone-section-title {
+  color: #246c7f;
+  text-align: center;
+  margin: 0 0 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.capstone-section-intro {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.capstone-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  display: grid;
+}
+
+.capstone-card {
+  background: #fff;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px #14283c12;
+}
+
+.capstone-card h3 {
+  color: #246c7f;
+  margin: 0 0 .75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.capstone-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.capstone-card ul {
+  margin: .75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.capstone-card li {
+  margin-bottom: .5rem;
+  line-height: 1.6;
+}
+
+.capstone-card li::marker {
+  color: #246c7f;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.metric-box {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 6px 18px #14283c0f;
+}
+
+.metric-number {
+  color: #246c7f;
+  margin-bottom: .4rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.metric-label {
+  color: #4b5b67;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.workflow-box {
+  background: #fff;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px #14283c0f;
+}
+
+.workflow-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  display: grid;
+}
+
+.workflow-step {
+  text-align: center;
+  background: #f7fbfc;
+  border: 1px solid #d9e6ea;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.workflow-step-number {
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  background: #246c7f;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto .75rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.workflow-step h4 {
+  color: #246c7f;
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+}
+
+.workflow-step p {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+.tech-tags {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  display: flex;
+}
+
+.tech-tag {
+  color: #1d4f5b;
+  background: #d2f1e4;
+  border-radius: 999px;
+  padding: .65rem 1rem;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.link-group {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.capstone-button {
+  color: #fff;
+  background: #246c7f;
+  border-radius: 10px;
+  padding: .85rem 1.3rem;
+  font-weight: 600;
+  transition: transform .18s, background .18s;
+  display: inline-block;
+}
+
+.capstone-button:hover {
+  color: #fff;
+  background: #1f5e6d;
+  transform: translateY(-1px);
+}
+
+.capstone-button.secondary {
+  color: #246c7f;
+  background: #fff;
+  border: 1px solid #246c7f;
+}
+
+.capstone-button.secondary:hover {
+  color: #1f5e6d;
+  background: #eef7f8;
+}
+
+.visual-card {
+  background: #fff;
+  border: 1px solid #d9e6ea;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px #14283c0f;
+}
+
+.visual-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.visual-caption {
+  color: #4b5b67;
+  margin-top: .9rem;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.capstone-footer {
+  color: #fff;
+  text-align: center;
+  background: #246c7f;
+  padding: 2rem 1rem;
+}
+
+.capstone-footer p {
+  color: #fff;
+  margin: .35rem 0;
+}
+
+@media (max-width: 900px) {
+  .capstone-grid, .metrics-grid, .workflow-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .capstone-hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .capstone-hero {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .capstone-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .capstone-hero h2 {
+    font-size: 1.15rem;
+  }
+
+  .capstone-section {
+    padding: 3rem 1rem;
+  }
+
+  .capstone-section-title {
+    font-size: 1.8rem;
+  }
+
+  .capstone-grid, .metrics-grid, .workflow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .link-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .capstone-button {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=capstone.a20c49d2.css.map */
