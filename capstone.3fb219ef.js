@@ -27062,42 +27062,1015 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _capstoneCss = require("../capstone.css");
+const workflowSteps = [
+    {
+        number: "01",
+        title: "Simulate park activity",
+        text: "AnyLogic creates a controlled public-park environment with zones, crowd movement, and incident injections."
+    },
+    {
+        number: "02",
+        title: "Detect meaningful signals",
+        text: "The system looks for distress audio, loitering context, and crowd anomalies rather than personal identity."
+    },
+    {
+        number: "03",
+        title: "Fuse evidence",
+        text: "Signals are combined into a risk score, confidence level, explanation, and severity tier."
+    },
+    {
+        number: "04",
+        title: "Support human review",
+        text: "Alerts are displayed in a dashboard so an operator can review context before any response decision."
+    }, 
+];
+const severityLevels = [
+    {
+        label: "P0",
+        title: "Immediate review",
+        text: "Strong distress signal plus supporting context."
+    },
+    {
+        label: "P1",
+        title: "High attention",
+        text: "Sustained distress signal or high-risk pattern."
+    },
+    {
+        label: "P2",
+        title: "Monitor closely",
+        text: "Crowd or behavior anomaly that may need review."
+    },
+    {
+        label: "P3",
+        title: "Informational",
+        text: "Low-risk event kept for visibility and metrics."
+    }, 
+];
+const techTags = [
+    "AnyLogic",
+    "Python",
+    "React",
+    "Streamlit",
+    "JSONL",
+    "FastAPI / Flask-ready",
+    "PyTorch-ready",
+    "Local-first testing",
+    "Human-in-the-loop review",
+    "Privacy-aware design", 
+];
+const boothQuestions = [
+    "How does the system reduce false alarms?",
+    "Why avoid face recognition and identity tracking?",
+    "What makes the dashboard useful for an operator?",
+    "How do severity tiers P0 to P3 work?",
+    "What would be improved in a future version?", 
+];
 const CapstoneApp = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "capstone-main",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-            className: "capstone-hero",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "capstone-hero-content",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "skip-link",
+                href: "#main-content",
+                children: "Skip to main content"
+            }, void 0, false, {
+                fileName: "src/Components/CapstoneApp.jsx",
+                lineNumber: 74,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+                className: "capstone-hero",
+                "aria-labelledby": "capstone-title",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "hero-shell",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "hero-copy",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "eyebrow",
+                                    children: "Capstone Project • Miami Dade College"
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 81,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    id: "capstone-title",
+                                    children: "Context-Aware Multimodal Public Safety Detection & Response Platform"
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 83,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "hero-lede",
+                                    children: "A privacy-aware prototype that uses simulation, multimodal signal fusion, and dashboard-based review to improve public safety awareness without relying on face recognition or identity tracking."
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 88,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "hero-actions",
+                                    "aria-label": "Page sections",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "capstone-button",
+                                            href: "#summary",
+                                            children: "Start with the simple overview"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 95,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "capstone-button secondary",
+                                            href: "#demo-flow",
+                                            children: "See how it works"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 98,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 94,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/CapstoneApp.jsx",
+                            lineNumber: 80,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("aside", {
+                            className: "hero-card",
+                            "aria-labelledby": "booth-guide-title",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "card-kicker",
+                                    children: "Booth guide"
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 105,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    id: "booth-guide-title",
+                                    children: "What to know in 60 seconds"
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 106,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                                    className: "clean-list",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                    children: "Goal:"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 110,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                " detect safety-relevant situations earlier."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 109,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                    children: "Boundary:"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 113,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                " no face recognition or identity tracking."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 112,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                    children: "Method:"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 117,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                " simulate, detect, fuse, explain, and review."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 116,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                    children: "Output:"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 121,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                " triaged alerts for a human operator."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 120,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 108,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/CapstoneApp.jsx",
+                            lineNumber: 104,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/CapstoneApp.jsx",
+                    lineNumber: 79,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/Components/CapstoneApp.jsx",
+                lineNumber: 78,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+                id: "main-content",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: "Capstone Project"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "summary",
+                        className: "capstone-section",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container narrow",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-label",
+                                        children: "Plain-language summary"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 131,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "What this project does"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 132,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-intro",
+                                        children: "This project explores how AI can help identify possible public safety concerns in a park-like environment while keeping privacy protections at the center. Instead of identifying people, the system focuses on situational signals such as distress audio, loitering context, crowd activity, and zone-level patterns."
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 133,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 130,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "summary-grid",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {
+                                            className: "info-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    children: "Why it matters"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 145,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: "Public spaces can become difficult to monitor during events, crowding, or fast-changing situations. A structured alert system can help operators notice important changes sooner."
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 146,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 144,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {
+                                            className: "info-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    children: "What makes it different"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 154,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: "The prototype is designed around context and explanation. It does not try to identify individuals. It summarizes signals into clear alert tiers for human review."
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 155,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 153,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {
+                                            className: "info-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    children: "What the demo shows"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 163,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: "The demo connects a simulated environment to detection logic, severity scoring, JSON alert records, and an operator-style dashboard."
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 164,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 162,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 143,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 142,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/Components/CapstoneApp.jsx",
-                        lineNumber: 9,
-                        columnNumber: 11
+                        lineNumber: 129,
+                        columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: "This page reflects the current direction of my capstone project and will be updated closer to the capstone fair with additional details, visuals, and presentation materials."
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "privacy",
+                        className: "capstone-section alt",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "capstone-container two-column",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "section-label",
+                                            children: "Ethical consideration"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 177,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            children: "Privacy-aware by design"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 178,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: "The system is built as a controlled prototype for learning, testing, and explainable review. The emphasis is on detecting risk patterns, not tracking identity."
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 179,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 176,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "boundary-card",
+                                    "aria-label": "Privacy boundaries",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "boundary-label positive",
+                                                    children: "Uses"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 188,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: "Distress signals, crowd context, zone activity, and alert metadata."
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 189,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 187,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "boundary-label caution",
+                                                    children: "Avoids"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 193,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: "Face recognition, identity tracking, biometric claims, or automatic enforcement."
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 194,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 192,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "boundary-label review",
+                                                    children: "Requires"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 198,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: "Human review before real-world response decisions."
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 199,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 197,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 186,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/CapstoneApp.jsx",
+                            lineNumber: 175,
+                            columnNumber: 11
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/CapstoneApp.jsx",
-                        lineNumber: 10,
-                        columnNumber: 11
+                        lineNumber: 174,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "demo-flow",
+                        className: "capstone-section",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container narrow",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-label",
+                                        children: "Demo workflow"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 207,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "How the prototype works"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 208,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-intro",
+                                        children: "The system follows a simple pipeline: simulate the environment, detect signals, combine evidence, and present alerts in a dashboard."
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 209,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 206,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
+                                    className: "workflow-list",
+                                    children: workflowSteps.map((step)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            className: "workflow-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "step-number",
+                                                    "aria-hidden": "true",
+                                                    children: step.number
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 220,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    children: step.title
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 223,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: step.text
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 224,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, step.number, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 219,
+                                            columnNumber: 17
+                                        }, undefined))
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 217,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 216,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 205,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "severity",
+                        className: "capstone-section alt",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container narrow",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-label",
+                                        children: "Alert triage"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 233,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "Severity levels are designed for quick interpretation"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 234,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-intro",
+                                        children: "The goal is not to overwhelm an operator. The dashboard organizes alerts into clear tiers so the most important events are reviewed first."
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 235,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 232,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "severity-grid",
+                                    children: severityLevels.map((level)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("article", {
+                                            className: "severity-card",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: `severity-pill severity-${level.label.toLowerCase()}`,
+                                                    children: level.label
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 246,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    children: level.title
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 249,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    children: level.text
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 250,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, level.label, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 245,
+                                            columnNumber: 17
+                                        }, undefined))
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 243,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 242,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 231,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "dashboard",
+                        className: "capstone-section",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "capstone-container two-column",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "section-label",
+                                            children: "Dashboard view"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 260,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            children: "What the operator sees"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 261,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: "The dashboard is designed to show the current alert focus, recent alerts, zone activity, confidence levels, and rolling performance metrics. This keeps the review process structured and easier to explain."
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 262,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 259,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "metric-panel",
+                                    "aria-label": "Example dashboard metrics",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "metric-box",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-value",
+                                                    children: "Precision"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 272,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-label",
+                                                    children: "How often alerts are correct"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 273,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 271,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "metric-box",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-value",
+                                                    children: "Recall"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 277,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-label",
+                                                    children: "How many true incidents are found"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 278,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 276,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "metric-box",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-value",
+                                                    children: "F1"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 282,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-label",
+                                                    children: "Balance between precision and recall"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 283,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 281,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "metric-box",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-value",
+                                                    children: "MTTD"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 287,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "metric-label",
+                                                    children: "Mean time to detect"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/CapstoneApp.jsx",
+                                                    lineNumber: 288,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 286,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 270,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/CapstoneApp.jsx",
+                            lineNumber: 258,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 257,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "technology",
+                        className: "capstone-section alt",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container narrow",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-label",
+                                        children: "Technical foundation"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 296,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        children: "Core tools and concepts"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 297,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "section-intro",
+                                        children: "The prototype combines simulation, local-first data handling, signal fusion, and dashboard design. The technical stack is shown at a high level so both technical and non-technical visitors can follow the project."
+                                    }, void 0, false, {
+                                        fileName: "src/Components/CapstoneApp.jsx",
+                                        lineNumber: 298,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 295,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "capstone-container",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "tech-tags",
+                                    "aria-label": "Technology stack",
+                                    children: techTags.map((tag)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "tech-tag",
+                                            children: tag
+                                        }, tag, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 309,
+                                            columnNumber: 17
+                                        }, undefined))
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 307,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 306,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 294,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                        id: "questions",
+                        className: "capstone-section",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "capstone-container two-column",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "section-label",
+                                            children: "Conversation starters"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 320,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            children: "Questions to ask at the booth"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 321,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: "These questions are good starting points for discussing the system design, ethical boundaries, technical stack, and future improvements."
+                                        }, void 0, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 322,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 319,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                                    className: "question-list",
+                                    children: boothQuestions.map((question)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: question
+                                        }, question, false, {
+                                            fileName: "src/Components/CapstoneApp.jsx",
+                                            lineNumber: 331,
+                                            columnNumber: 17
+                                        }, undefined))
+                                }, void 0, false, {
+                                    fileName: "src/Components/CapstoneApp.jsx",
+                                    lineNumber: 329,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/CapstoneApp.jsx",
+                            lineNumber: 318,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 317,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/CapstoneApp.jsx",
-                lineNumber: 8,
-                columnNumber: 9
+                lineNumber: 128,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
+                className: "capstone-footer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                children: "Michael Stamler"
+                            }, void 0, false, {
+                                fileName: "src/Components/CapstoneApp.jsx",
+                                lineNumber: 340,
+                                columnNumber: 11
+                            }, undefined),
+                            " • Bachelor of Science in Applied Artificial Intelligence"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 339,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: "Miami Dade College • Capstone Fair"
+                    }, void 0, false, {
+                        fileName: "src/Components/CapstoneApp.jsx",
+                        lineNumber: 343,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/CapstoneApp.jsx",
+                lineNumber: 338,
+                columnNumber: 7
             }, undefined)
-        }, void 0, false, {
-            fileName: "src/Components/CapstoneApp.jsx",
-            lineNumber: 7,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "src/Components/CapstoneApp.jsx",
-        lineNumber: 6,
+        lineNumber: 73,
         columnNumber: 5
     }, undefined);
 };
