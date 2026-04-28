@@ -5,22 +5,22 @@ const workflowSteps = [
   {
     number: "01",
     title: "Simulate park activity",
-    text: "AnyLogic creates a controlled public-park environment with zones, crowd movement, and incident injections.",
+    text: "A controlled simulation creates a public-park environment with zones, crowd movement, and example safety scenarios.",
   },
   {
     number: "02",
     title: "Detect meaningful signals",
-    text: "The system looks for distress audio, loitering context, and crowd anomalies rather than personal identity.",
+    text: "The system looks for situational signals such as distress, unusual activity, and crowd context rather than personal identity.",
   },
   {
     number: "03",
-    title: "Fuse evidence",
-    text: "Signals are combined into a risk score, confidence level, explanation, and severity tier.",
+    title: "Combine evidence",
+    text: "Signals are summarized into a risk level, confidence estimate, explanation, and alert priority.",
   },
   {
     number: "04",
     title: "Support human review",
-    text: "Alerts are displayed in a dashboard so an operator can review context before any response decision.",
+    text: "Alerts are presented in a dashboard so a human operator can review context before any response decision.",
   },
 ];
 
@@ -28,43 +28,43 @@ const severityLevels = [
   {
     label: "P0",
     title: "Immediate review",
-    text: "Strong distress signal plus supporting context.",
+    text: "Strong safety signal with supporting context.",
   },
   {
     label: "P1",
     title: "High attention",
-    text: "Sustained distress signal or high-risk pattern.",
+    text: "Sustained concern or elevated risk pattern.",
   },
   {
     label: "P2",
     title: "Monitor closely",
-    text: "Crowd or behavior anomaly that may need review.",
+    text: "Contextual anomaly that may need continued review.",
   },
   {
     label: "P3",
     title: "Informational",
-    text: "Low-risk event kept for visibility and metrics.",
+    text: "Low-risk event kept for visibility and learning.",
   },
 ];
 
 const techTags = [
-  "AnyLogic",
-  "Python",
-  "React",
-  "Streamlit",
-  "JSONL",
-  "FastAPI / Flask-ready",
-  "PyTorch-ready",
+  "Simulation modeling",
+  "Python-based detection logic",
+  "Dashboard monitoring",
+  "Structured alert records",
+  "Signal fusion",
+  "Severity triage",
   "Local-first testing",
   "Human-in-the-loop review",
   "Privacy-aware design",
+  "Explainable AI concepts",
 ];
 
 const boothQuestions = [
   "How does the system reduce false alarms?",
   "Why avoid face recognition and identity tracking?",
   "What makes the dashboard useful for an operator?",
-  "How do severity tiers P0 to P3 work?",
+  "How do severity tiers support decision-making?",
   "What would be improved in a future version?",
 ];
 
@@ -86,9 +86,10 @@ const CapstoneApp = () => {
             </h1>
 
             <p className="hero-lede">
-              A privacy-aware prototype that uses simulation, multimodal signal
-              fusion, and dashboard-based review to improve public safety
-              awareness without relying on face recognition or identity tracking.
+              A privacy-aware prototype that explores how simulation,
+              situational signals, and dashboard-based review can improve public
+              safety awareness without relying on face recognition or identity
+              tracking.
             </p>
 
             <div className="hero-actions" aria-label="Page sections">
@@ -107,18 +108,19 @@ const CapstoneApp = () => {
 
             <ul className="clean-list">
               <li>
-                <strong>Goal:</strong> detect safety-relevant situations earlier.
+                <strong>Goal:</strong> improve awareness of safety-relevant
+                situations.
               </li>
               <li>
                 <strong>Boundary:</strong> no face recognition or identity
                 tracking.
               </li>
               <li>
-                <strong>Method:</strong> simulate, detect, fuse, explain, and
-                review.
+                <strong>Method:</strong> simulate, detect, combine, explain,
+                and review.
               </li>
               <li>
-                <strong>Output:</strong> triaged alerts for a human operator.
+                <strong>Output:</strong> prioritized alerts for human review.
               </li>
             </ul>
           </aside>
@@ -131,11 +133,11 @@ const CapstoneApp = () => {
             <p className="section-label">Plain-language summary</p>
             <h2>What this project does</h2>
             <p className="section-intro">
-              This project explores how AI can help identify possible public
-              safety concerns in a park-like environment while keeping privacy
-              protections at the center. Instead of identifying people, the
-              system focuses on situational signals such as distress audio,
-              loitering context, crowd activity, and zone-level patterns.
+              This project explores how AI can support public safety awareness
+              in a park-like environment while keeping privacy protections at
+              the center. Instead of identifying people, the system focuses on
+              situational patterns such as distress signals, unusual activity,
+              crowd context, and zone-level changes.
             </p>
           </div>
 
@@ -154,8 +156,8 @@ const CapstoneApp = () => {
                 <h3>What makes it different</h3>
                 <p>
                   The prototype is designed around context and explanation. It
-                  does not try to identify individuals. It summarizes signals
-                  into clear alert tiers for human review.
+                  does not try to identify individuals. It organizes signals
+                  into clear alert priorities for human review.
                 </p>
               </article>
 
@@ -163,8 +165,7 @@ const CapstoneApp = () => {
                 <h3>What the demo shows</h3>
                 <p>
                   The demo connects a simulated environment to detection logic,
-                  severity scoring, JSON alert records, and an operator-style
-                  dashboard.
+                  alert prioritization, and an operator-style dashboard.
                 </p>
               </article>
             </div>
@@ -186,12 +187,18 @@ const CapstoneApp = () => {
             <div className="boundary-card" aria-label="Privacy boundaries">
               <div>
                 <span className="boundary-label positive">Uses</span>
-                <p>Distress signals, crowd context, zone activity, and alert metadata.</p>
+                <p>
+                  Situational signals, crowd context, zone activity, and alert
+                  metadata.
+                </p>
               </div>
 
               <div>
                 <span className="boundary-label caution">Avoids</span>
-                <p>Face recognition, identity tracking, biometric claims, or automatic enforcement.</p>
+                <p>
+                  Face recognition, identity tracking, biometric claims, or
+                  automatic enforcement.
+                </p>
               </div>
 
               <div>
@@ -234,8 +241,8 @@ const CapstoneApp = () => {
             <h2>Severity levels are designed for quick interpretation</h2>
             <p className="section-intro">
               The goal is not to overwhelm an operator. The dashboard organizes
-              alerts into clear tiers so the most important events are reviewed
-              first.
+              alerts into clear tiers so the most important situations can be
+              reviewed first.
             </p>
           </div>
 
@@ -243,7 +250,9 @@ const CapstoneApp = () => {
             <div className="severity-grid">
               {severityLevels.map((level) => (
                 <article className="severity-card" key={level.label}>
-                  <div className={`severity-pill severity-${level.label.toLowerCase()}`}>
+                  <div
+                    className={`severity-pill severity-${level.label.toLowerCase()}`}
+                  >
                     {level.label}
                   </div>
                   <h3>{level.title}</h3>
@@ -261,13 +270,13 @@ const CapstoneApp = () => {
               <h2>What the operator sees</h2>
               <p>
                 The dashboard is designed to show the current alert focus,
-                recent alerts, zone activity, confidence levels, and rolling
-                performance metrics. This keeps the review process structured
-                and easier to explain.
+                recent alerts, zone activity, confidence levels, and performance
+                indicators. This keeps the review process structured and easier
+                to explain.
               </p>
             </div>
 
-            <div className="metric-panel" aria-label="Example dashboard metrics">
+            <div className="metric-panel" aria-label="Example dashboard indicators">
               <div className="metric-box">
                 <span className="metric-value">Precision</span>
                 <span className="metric-label">How often alerts are correct</span>
@@ -275,12 +284,16 @@ const CapstoneApp = () => {
 
               <div className="metric-box">
                 <span className="metric-value">Recall</span>
-                <span className="metric-label">How many true incidents are found</span>
+                <span className="metric-label">
+                  How many true situations are found
+                </span>
               </div>
 
               <div className="metric-box">
                 <span className="metric-value">F1</span>
-                <span className="metric-label">Balance between precision and recall</span>
+                <span className="metric-label">
+                  Balance between precision and recall
+                </span>
               </div>
 
               <div className="metric-box">
@@ -296,10 +309,10 @@ const CapstoneApp = () => {
             <p className="section-label">Technical foundation</p>
             <h2>Core tools and concepts</h2>
             <p className="section-intro">
-              The prototype combines simulation, local-first data handling,
-              signal fusion, and dashboard design. The technical stack is shown
-              at a high level so both technical and non-technical visitors can
-              follow the project.
+              The prototype combines simulation, local-first testing, signal
+              fusion, dashboard design, and explainable AI concepts. The stack
+              is summarized at a high level so both technical and non-technical
+              visitors can follow the project.
             </p>
           </div>
 
@@ -321,8 +334,8 @@ const CapstoneApp = () => {
               <h2>Questions to ask at the booth</h2>
               <p>
                 These questions are good starting points for discussing the
-                system design, ethical boundaries, technical stack, and future
-                improvements.
+                system design, ethical boundaries, technical direction, and
+                future improvements.
               </p>
             </div>
 
