@@ -1,0 +1,24 @@
+{
+  "sample": [
+    {
+      "description": "A muscular man crouches in an ancient Egyptian-style chamber, turning a stone combination lock covered in hieroglyphics.",
+      "imageUrl": "https://raw.githubusercontent.com/MSTAM-MDC/mstamwebsite/refs/heads/main/src/images/ancient-cookie-code.png"
+    },
+    {
+      "description": "A muscular man stands proudly with crossed arms in front of a rustic forest cabin, with chopped wood and an axe nearby.",
+      "imageUrl": "https://raw.githubusercontent.com/MSTAM-MDC/mstamwebsite/refs/heads/main/src/images/cabin-lumberjack-setup.png"
+    },
+    {
+      "description": "A smiling muscular chef in a luxury cabin kitchen presents a tray of freshly baked chocolate chip cookies.",
+      "imageUrl": "https://raw.githubusercontent.com/MSTAM-MDC/mstamwebsite/refs/heads/main/src/images/cookie-chef-payoff.png"
+    },
+    {
+      "description": "A muscular man poses with crossed arms inside a dramatic luxury cabin filled with warm lighting, plants, and a grand staircase.",
+      "imageUrl": "https://raw.githubusercontent.com/MSTAM-MDC/mstamwebsite/refs/heads/main/src/images/luxury-cabin-flex.png"
+    },
+    {
+      "description": "A muscular runner finishes a 5K race wearing a shirt that says he runs so he can eat cookies without guilt.",
+      "imageUrl": "https://raw.githubusercontent.com/MSTAM-MDC/mstamwebsite/refs/heads/main/src/images/running-for-cookies-5k.png"
+    }
+  ]
+}
